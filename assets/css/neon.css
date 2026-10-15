@@ -1,0 +1,141 @@
+/*
+  neon.css: o toque hacker do site de Python (chuva de 0 e 1 e brilho neon, como no PyQuiz).
+  versão 3 · 2026-10-15 (celular estreito: a janela de código da abertura rola por dentro) · NESTE SITE (Lab I) o neon é o verde-lima da agulha da bússola, com toques do violeta do mostrador (a chuva alterna as duas).
+  O link da disciplina na barra é o símbolo do Lab I (assets/img/lab-bussola.svg), da família dos Labs.
+  Não copie esta versão para os outros sites.
+
+  Carregue depois do estilo.css e do disciplina.css.
+*/
+
+:root {
+  --neon: #a3e635;
+  --neon-brilho: rgba(163, 230, 53, .45);
+  --neon-2: #a78bfa;
+  --neon-2-brilho: rgba(167, 139, 250, .4);
+}
+
+/* no claro, as duas cores mais fechadas, para dar leitura no fundo branco */
+[data-tema="claro"] {
+  --neon: #4d7c0f;
+  --neon-brilho: rgba(77, 124, 15, .2);
+  --neon-2: #6d28d9;
+  --neon-2-brilho: rgba(109, 40, 217, .2);
+}
+
+
+/* chuva de 0 e 1 atrás da abertura, sumindo embaixo */
+.chuva-matrix {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: .3;
+  -webkit-mask-image: linear-gradient(180deg, #000 30%, transparent 95%);
+  mask-image: linear-gradient(180deg, #000 30%, transparent 95%);
+}
+
+[data-tema="claro"] .chuva-matrix {
+  opacity: .16;
+}
+
+
+/* palavra em neon (ex.: "você" no título) */
+.neon {
+  color: var(--neon);
+  text-shadow:
+    0 0 8px var(--neon-brilho),
+    0 0 24px var(--neon-brilho);
+}
+
+[data-tema="claro"] .neon {
+  text-shadow: none;
+}
+
+/* o logo flutuante ganha um halo */
+.logo-flutua.neon-halo {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, .7) inset,
+    0 0 0 1px rgba(0, 0, 0, .07),
+    0 24px 50px -18px rgba(0, 0, 0, .7),
+    0 0 40px -4px var(--neon-brilho);
+}
+
+/* o prompt e as etiquetas verdes da página também brilham de leve, na segunda cor */
+.prompt b,
+.etiqueta.verde {
+  text-shadow: 0 0 10px var(--neon-2-brilho);
+}
+
+
+/* letra grossa e fechada nas palavras em neon e no link da barra */
+.neon,
+.marcas .marca-disc {
+  font-family: var(--f-titulo);
+  font-weight: 900;
+  font-stretch: 100%;
+  letter-spacing: -.01em;
+}
+
+/* o símbolo do Lab I como botão da página inicial, na barra do topo */
+.marcas .marca-disc.marca-logo {
+  display: inline-flex;
+  padding: 0;
+  text-shadow: none;
+}
+
+.marca-logo img {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
+  box-shadow: 0 0 10px var(--neon-brilho);
+  transition: box-shadow .2s, transform .2s;
+}
+
+.marca-logo:hover img,
+.marca-logo:focus-visible img {
+  box-shadow: 0 0 18px var(--neon-2-brilho), 0 0 4px var(--neon-2);
+  transform: scale(1.06);
+}
+
+.pausado .marca-logo img {
+  transition: none;
+}
+
+/* v2: "No seu curso" (ADS, GTI, SI, IA) usa a grade do STEAM com siglas de até 3 letras e 2 colunas */
+.steam.cursos {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.steam.cursos .letra {
+  width: fit-content;
+  min-width: 2.6rem;
+  padding: 0 .6rem;
+  font-size: 1rem;
+}
+
+@media (max-width: 860px) {
+  .steam.cursos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* v3: cartão "na dependência" na atividade: o caminho assíncrono de quem não vem aos encontros */
+.cartao.dependencia {
+  margin-top: 1rem;
+  border-left: 4px solid var(--neon-2);
+}
+
+.cartao.dependencia .olho {
+  color: var(--neon-2);
+}
+
+.cartao.dependencia p {
+  margin: .4rem 0 0;
+}
+
+/* celular estreito (320px): a linha comprida da janela de código não alarga a página; ela rola por dentro */
+.abertura-grade > * { min-width: 0; }
+.vitrine .codigo { overflow-x: auto; }
