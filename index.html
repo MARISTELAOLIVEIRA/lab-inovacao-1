@@ -35,8 +35,7 @@
         <a href="#ementa">Ementa</a>
         <a href="#aulas">Aulas</a>
         <a href="#avaliacao">Avaliação</a>
-        <a href="#atividades" data-atividades-link style="display:none">Atividades</a>
-        <a href="#bibliografia">Bibliografia</a>
+        <a href="#atividades">Atividades</a>
       </nav>
       <div class="ajustes">
         <button type="button" id="btn-tema" aria-label="Mudar para o tema claro">
@@ -275,12 +274,40 @@
       </div>
     </section>
 
+    <!-- ===================== BIBLIOGRAFIA ===================== -->
+    <section class="bloco alt" id="bibliografia">
+      <div class="envolve">
+        <div class="cab" data-revela>
+          <span class="olho">B1 · bibliografia</span>
+          <h2>Para ir além da aula</h2>
+        </div>
+        <div class="biblio">
+          <div class="cartao" data-revela>
+            <span class="olho">Básica</span>
+            <ol>
+              <li><strong>A tríade do tempo</strong>BARBOSA, Christian. A tríade do tempo: um modelo comprovado para organizar sua vida e aumentar sua produtividade e seu equilíbrio. Rio de Janeiro: Sextante, 2011.</li>
+              <li><strong>Ética profissional</strong>BENNETT, Carole. Ética profissional. São Paulo: Cengage Learning, 2008.</li>
+              <li><strong>Liderança nua e crua</strong>MANDELLI, L. Liderança Nua e Crua: decifrando o lado masculino e feminino de liderar. Petrópolis/RJ: Vozes, 2015.</li>
+            </ol>
+          </div>
+          <div class="cartao" data-revela style="--i:1">
+            <span class="olho">Complementar</span>
+            <ol>
+              <li><strong>Foco</strong>GOLEMAN, Daniel. Foco: a atenção e seu papel fundamental para o sucesso. Rio de Janeiro: Objetiva, 2013.</li>
+              <li><strong>O poder do hábito</strong>DUHIGG, Charles. O poder do hábito: por que fazemos o que fazemos na vida e nos negócios. Rio de Janeiro: Objetiva, 2012.</li>
+              <li><strong>Gestão do RH 4.0</strong>MENDES, F. A. N. Gestão do RH 4.0: digital, humano e disruptivo. São Paulo, SP: Literare Books Internacional, 2021.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===================== AULAS ===================== -->
     <!--
       EDITE AQUI: uma linha por aula, numerada e sem data (o material serve para vários semestres). Quando a página da aula existir, coloque o link no título
       (<a href="aulas/aula-NN.html">) e a etiqueta "abrir a aula →" no fim da linha de datas.
     -->
-    <section class="bloco alt" id="aulas">
+    <section class="bloco" id="aulas">
       <div class="envolve">
         <div class="cab" data-revela>
           <span class="olho">A1–A18 · aulas</span>
@@ -364,20 +391,8 @@
       </div>
     </section>
 
-    <!-- ===================== J1 · ATIVIDADES (liberadas pelo Placa-Mãe; a seção só aparece quando há alguma) ===================== -->
-    <section class="bloco" id="atividades" data-atividades-secao style="display:none">
-      <div class="envolve">
-        <div class="cab">
-          <span class="olho">J1 · atividades</span>
-          <h2>Atividades</h2>
-          <p>As atividades que valem nota, com o que fazer e os links.</p>
-        </div>
-        <div class="repos" data-atividades></div>
-      </div>
-    </section>
-
     <!-- ===================== COMO AS AULAS FUNCIONAM ===================== -->
-    <section class="bloco" id="metodo">
+    <section class="bloco alt" id="metodo">
       <div class="envolve">
         <div class="cab" data-revela>
           <span class="olho">M1 · metodologia</span>
@@ -424,6 +439,51 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ===================== AVALIAÇÃO ===================== -->
+    <section class="bloco" id="avaliacao">
+      <div class="envolve">
+        <div class="cab" data-revela>
+          <span class="olho">N1 · avaliação</span>
+          <h2>Como a nota é montada</h2>
+          <p>Dez pontos por bimestre. Aqui não tem prova: a nota vem do seu portfólio.</p>
+        </div>
+        <div class="avaliacao">
+          <div class="cartao" data-revela>
+            <span class="olho">1º bimestre</span>
+            <h3>10 pontos</h3>
+            <div class="pontos" aria-hidden="true"><span style="--pts:4"></span><span style="--pts:6"></span></div>
+            <ul class="partes">
+              <li><span>Relatório de Perfil Profissional (aula 8)</span><strong>4,0</strong></li>
+              <li><span>Portfólio de autoconhecimento com explicação (aula 9)</span><strong>6,0</strong></li>
+            </ul>
+          </div>
+          <div class="cartao" data-revela style="--i:1">
+            <span class="olho">2º bimestre</span>
+            <h3>10 pontos</h3>
+            <div class="pontos" aria-hidden="true"><span style="--pts:7"></span><span style="--pts:2"></span><span style="--pts:1"></span></div>
+            <ul class="partes">
+              <li><span>Projeto final: portfólio de carreira e ação social (aula 17)</span><strong>7,0</strong></li>
+              <li><span>Avaliação Integrada</span><strong>2,0</strong></li>
+              <li><span>Participação na Jornada Interdisciplinar</span><strong>1,0</strong></li>
+            </ul>
+          </div>
+        </div>
+        <p class="aprovacao" data-revela>Para ser aprovado: média final de 6,0 e pelo menos 75% de frequência.</p>
+      </div>
+    </section>
+
+    <!-- ===================== J1 · ATIVIDADES (as liberadas pelo Placa-Mãe entram em data-atividades) ===================== -->
+    <section class="bloco alt" id="atividades">
+      <div class="envolve">
+        <div class="cab">
+          <span class="olho">J1 · atividades</span>
+          <h2>Atividades</h2>
+          <p>As atividades que valem nota, com o que fazer e os links.</p>
+        </div>
+        <div class="repos" data-atividades></div>
 
         <!-- ===================== ATIVIDADES INTERATIVAS (atividades/) ===================== -->
         <div class="cab" id="interativas" data-revela style="margin-top:3rem">
@@ -455,67 +515,6 @@
             <h4><a href="atividades/quiz.html?b=2">Quiz do 2º bimestre</a></h4>
             <p>Dez perguntas com explicação para revisar as aulas 10 a 16 e estudar para a recuperação.</p>
             <span class="repo-pe"><span class="ling" style="--cor:#a3e635"><i></i>Interativo</span><span class="etiqueta">Aulas 16 e 18</span></span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== AVALIAÇÃO ===================== -->
-    <section class="bloco alt" id="avaliacao">
-      <div class="envolve">
-        <div class="cab" data-revela>
-          <span class="olho">A1 · avaliação</span>
-          <h2>Como a nota é montada</h2>
-          <p>Dez pontos por bimestre. Aqui não tem prova: a nota vem do seu portfólio.</p>
-        </div>
-        <div class="avaliacao">
-          <div class="cartao" data-revela>
-            <span class="olho">1º bimestre</span>
-            <h3>10 pontos</h3>
-            <div class="pontos" aria-hidden="true"><span style="--pts:4"></span><span style="--pts:6"></span></div>
-            <ul class="partes">
-              <li><span>Relatório de Perfil Profissional (aula 8)</span><strong>4,0</strong></li>
-              <li><span>Portfólio de autoconhecimento com explicação (aula 9)</span><strong>6,0</strong></li>
-            </ul>
-          </div>
-          <div class="cartao" data-revela style="--i:1">
-            <span class="olho">2º bimestre</span>
-            <h3>10 pontos</h3>
-            <div class="pontos" aria-hidden="true"><span style="--pts:7"></span><span style="--pts:2"></span><span style="--pts:1"></span></div>
-            <ul class="partes">
-              <li><span>Projeto final: portfólio de carreira e ação social (aula 17)</span><strong>7,0</strong></li>
-              <li><span>Avaliação Integrada</span><strong>2,0</strong></li>
-              <li><span>Participação na Jornada Interdisciplinar</span><strong>1,0</strong></li>
-            </ul>
-          </div>
-        </div>
-        <p class="aprovacao" data-revela>Para ser aprovado: média final de 6,0 e pelo menos 75% de frequência.</p>
-      </div>
-    </section>
-
-    <!-- ===================== BIBLIOGRAFIA ===================== -->
-    <section class="bloco" id="bibliografia">
-      <div class="envolve">
-        <div class="cab" data-revela>
-          <span class="olho">B1 · bibliografia</span>
-          <h2>Para ir além da aula</h2>
-        </div>
-        <div class="biblio">
-          <div class="cartao" data-revela>
-            <span class="olho">Básica</span>
-            <ol>
-              <li><strong>A tríade do tempo</strong>BARBOSA, Christian. A tríade do tempo: um modelo comprovado para organizar sua vida e aumentar sua produtividade e seu equilíbrio. Rio de Janeiro: Sextante, 2011.</li>
-              <li><strong>Ética profissional</strong>BENNETT, Carole. Ética profissional. São Paulo: Cengage Learning, 2008.</li>
-              <li><strong>Liderança nua e crua</strong>MANDELLI, L. Liderança Nua e Crua: decifrando o lado masculino e feminino de liderar. Petrópolis/RJ: Vozes, 2015.</li>
-            </ol>
-          </div>
-          <div class="cartao" data-revela style="--i:1">
-            <span class="olho">Complementar</span>
-            <ol>
-              <li><strong>Foco</strong>GOLEMAN, Daniel. Foco: a atenção e seu papel fundamental para o sucesso. Rio de Janeiro: Objetiva, 2013.</li>
-              <li><strong>O poder do hábito</strong>DUHIGG, Charles. O poder do hábito: por que fazemos o que fazemos na vida e nos negócios. Rio de Janeiro: Objetiva, 2012.</li>
-              <li><strong>Gestão do RH 4.0</strong>MENDES, F. A. N. Gestão do RH 4.0: digital, humano e disruptivo. São Paulo, SP: Literare Books Internacional, 2021.</li>
-            </ol>
           </div>
         </div>
       </div>
@@ -582,7 +581,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
   <script src="assets/js/conta.js?v=3" data-disciplina="lab-inovacao-1"></script>
   <script src="assets/js/aulas.js"></script>
-  <script src="assets/js/atividades.js?v=2"></script>
+  <script src="assets/js/atividades.js?v=3"></script>
   <script src="assets/js/matrix.js?v=2"></script>
 </body>
 </html>
