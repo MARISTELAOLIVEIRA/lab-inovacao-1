@@ -129,7 +129,7 @@ Funcionam no computador e no celular. O que você digita fica salvo só no seu n
 | 💬 **Teams, Loop e Whiteboard** | Combinar, debater e montar o portfólio numa página sua do Loop. |
 | 🎓 **Moodle** | Entregar as atividades (e acompanhar tudo, se você está em dependência). |
 | 📘 **Microsoft Learn** | Estudar no seu ritmo. |
-| 🐙 **GitHub** e o **Curso de GitHub** | Dar os primeiros passos no lugar onde dev mostra o que sabe. |
+| <img src="https://maristelaoliveira.github.io/assets/img/octocat-stela.webp" width="22" height="22" alt="Octocat da Stela" align="absmiddle"> **GitHub** e o **Curso de GitHub** | Dar os primeiros passos no lugar onde dev mostra o que sabe. |
 | 💼 **LinkedIn** | O seu perfil profissional on-line. |
 | 📋 **Planner e Forms** | Planejar a ação social e medir o impacto. |
 | 🎤 **PowerPoint com Speaker Coach** | Ensaiar o pitch pessoal sem gaguejar. |
